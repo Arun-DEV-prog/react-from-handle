@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 const ControlFeild = () => {
    
      const [password,setPassword]=useState('')
+     const [error,setError]=useState('')
 
      const handleSubmit=(e)=>{
          e.preventDefault();
@@ -10,16 +11,27 @@ const ControlFeild = () => {
      }
       const handleOnchange=(e)=>{
          console.log(e.target.value)
+         setPassword(e.target.value)
+        
+          if(password.length< 6){
+             setError('passoword must be 6 chartacter or longer')
+          }else{
+             setError('')
+          }
+
       }
   return (
     <div>
         <form onSubmit={handleSubmit}>
-        <input type="text" name="name" id="" placeholder='Name' />
+        <input type="text" name="name" placeholder='Name' />
        <br />
-       <input type="password" onChange={handleOnchange} defaultValue={password} name="password" id="" required  placeholder='Password'/>
+       <input type="password" onChange={handleOnchange} defaultValue={password} name="password" required  placeholder='Password'/>
        <br />
         <input type="submit" value="Submit" />
         </form>
+        <p style={{color:"red"}}>
+             <small>{error}</small>
+        </p>
     </div>
   )
 }

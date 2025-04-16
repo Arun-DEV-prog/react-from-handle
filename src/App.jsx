@@ -1,5 +1,6 @@
 
 import './App.css'
+import ControlFeild from './ControlFeild/ControlFeild'
 import FromAction from './FromAction/FromAction'
 import SimpleForm from './SimpleForm/SimpleForm'
 
@@ -10,7 +11,8 @@ function App() {
     <>
        <h1>Explore React From</h1>
         {/* <SimpleForm></SimpleForm> */}
-       <FromAction></FromAction>
+       {/* <FromAction></FromAction> */}
+        <ControlFeild></ControlFeild>
     </>
   )
 }

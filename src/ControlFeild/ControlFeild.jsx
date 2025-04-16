@@ -5,9 +5,21 @@ const ControlFeild = () => {
      const [password,setPassword]=useState('')
      const [error,setError]=useState('')
 
+    //  const [fromdata,setFromdata]=useState({
+    // name: "",
+    // password: "",
+    // phone:
+// })
+
      const handleSubmit=(e)=>{
          e.preventDefault();
           console.log(e.target.password.value)
+        //    when submit the from show error
+         if(password.length < 6){
+             setError('password must be 6 character')
+         }else{
+             setError('')
+         }
      }
       const handleOnchange=(e)=>{
          console.log(e.target.value)

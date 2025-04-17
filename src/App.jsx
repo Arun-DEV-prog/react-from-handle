@@ -1,6 +1,7 @@
 
 import './App.css'
 import ControlFeild from './ControlFeild/ControlFeild'
+import Framilytree from './FamilyTree/Framilytree'
 import FromAction from './FromAction/FromAction'
 import HookFrom from './HookForm/HookFrom'
 import Useinputhook from './Hooks/Useinputhook'
@@ -21,7 +22,8 @@ function App() {
          {/* <FromHandle></FromHandle> */}
          {/* <Uncontrolfield></Uncontrolfield> */}
         {/* <HookFrom></HookFrom> */}
-        <Productmangment></Productmangment>
+        {/* <Productmangment></Productmangment> */}
+        <Framilytree></Framilytree>
     </>
   )
 }
